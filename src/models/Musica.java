@@ -38,4 +38,13 @@ public class Musica extends Audio {
     public void setCompositor(String compositor) {
         this.compositor = compositor;
     }
+
+    @Override
+    public int getClassificacao() {
+        if (getTotalDeReproducoes() > 50) {
+            return 10;
+        } else {
+            return 5;
+        }
+    }
 }
