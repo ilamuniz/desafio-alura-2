@@ -1,5 +1,6 @@
 package Aplicação;
 
+import models.Favoritos;
 import models.Musica;
 import models.Podcast;
 
@@ -23,13 +24,18 @@ public class Aplicação {
         podcast.setTitulo("Carreira em Java");
         podcast.setTema("Programação e Tecnologia");
 
-        for (int i = 0; i < 250; i++) {
+        for (int i = 0; i < 90; i++) {
             podcast.curtir();
         }
 
         for (int i = 0; i < 600; i++) {
             podcast.reproduzir();
         }
+
+        Favoritos favoritos = new Favoritos();
+        favoritos.favoritar(musica);
+        favoritos.favoritar(podcast);
+
     }
 
 }
